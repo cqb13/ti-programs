@@ -6,6 +6,14 @@ A collection of various programs for TI calculators. Programs are written in TI-
 
 To easily browse and download programs check out the website: [TI Programs](https://ti-programs.cqb13.dev/)
 
+## Using Programs
+
+To use these programs, you will need a TI calculator and a way to transfer the programs to the calculator. You can use a USB cable or a program like [TI Connect CE](https://education.ti.com/en/products/computer-software/ti-connect-ce-sw) to transfer the programs. You can also enter the programs manually on the calculator if you prefer.
+
+## Making Programs
+
+If you are interested in making your own programs, check out [Awesome TI Docs](https://github.com/TI-Toolkit/awesome-ti-docs/blob/main/README.md) for resources on learning TI-BASIC and programming for TI calculators.
+
 ## Contributing
 
 If you would like to add a program, please follow the guidelines below:
