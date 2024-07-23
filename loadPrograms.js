@@ -32,6 +32,30 @@ const loadPrograms = async () => {
                 txt_file_url = file.html_url;
               } else if (file.name === "about.md") {
                 const aboutResponse = await fetch(file.download_url);
+
+                const aboutText = await aboutResponse.text();
+
+                const aboutLines = aboutText.split("\n");
+
+                let descriptionLines = [];
+                let descriptionStarted = false;
+                for (const line of aboutLines) {
+                  if (line.startsWith("# ")) {
+                    name = line.substring(2);
+                    descriptionStarted = true;
+                    continue;
+                  }
+
+                  if (line.startsWith("#")) {
+                    descriptionStarted = false;
+                  }
+
+                  if (descriptionStarted && line != "") {
+                    descriptionLines.push(line);
+                  }
+                }
+
+                description = descriptionLines.join(" ");
               }
             }
 
