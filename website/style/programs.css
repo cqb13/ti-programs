@@ -1,0 +1,44 @@
+#programs {
+  display: flex;
+  justify-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.program-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  min-height: 10rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.program-card div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.program-card div button {
+  all: unset;
+  cursor: pointer;
+  background-color: rgb(68, 159, 68);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.program-card div button:hover {
+  background-color: rgba(68, 159, 68, 0.873);
+  border-radius: 1.1rem;
+  transition: ease-in-out;
+  transition-duration: 400ms;
+}

@@ -1,0 +1,52 @@
+.title p {
+  display: block;
+  width: 50%;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+#explore {
+  all: unset;
+  margin-top: 2rem;
+  background-color: rgb(68, 159, 68);
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+#explore:hover {
+  background-color: rgba(68, 159, 68, 0.873);
+  border-radius: 1.1rem;
+  transition: ease-in-out;
+  transition-duration: 400ms;
+}
+
+main a {
+  color: rgb(68, 159, 68);
+}
+
+main section h2 {
+  font-size: 2rem;
+}
+
+main section span {
+  display: block;
+  width: 70%;
+}
+
+main section p,
+span,
+li {
+  font-size: 1.2rem;
+}
+
+main section pre code {
+  font-size: 1rem;
+}
+
+main section li i {
+  display: inline-block;
+  width: 70%;
+}

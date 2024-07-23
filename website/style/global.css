@@ -1,0 +1,70 @@
+body {
+  padding: 1rem;
+  background: #e3e3e3;
+}
+
+b {
+  color: rgb(68, 159, 68);
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav a {
+  all: unset;
+  font-size: 1.4rem;
+  padding: 1rem;
+  border-radius: 0.9rem;
+}
+
+nav a:hover {
+  background-color: rgb(68, 159, 68);
+  border-radius: 1rem;
+  transition: ease-in-out;
+  transition-duration: 400ms;
+  cursor: pointer;
+}
+
+#view-mode {
+  cursor: pointer;
+}
+
+.title {
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title h1 {
+  font-size: 5rem;
+  text-align: center;
+  margin: 0;
+}
+
+main {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+footer a {
+  color: black;
+}
