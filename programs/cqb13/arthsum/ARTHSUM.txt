@@ -1,0 +1,17 @@
+ARTHSUM
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Input "AV1: ",B
+Input "D: ",D
+Input "AVN: ",A
+A-B->X
+X/D->Y
+Y+1->N
+A+B->V
+V/2->U
+U*N->T
+Disp T

@@ -1,0 +1,15 @@
+SLOPE
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Input "Y2: ",X
+Input "Y1: ",Y
+Input "X2: ",Z
+Input "X1: ",V
+X-Y->T
+Z-V->U
+T/U->P
+Disp P

@@ -1,0 +1,17 @@
+ARTHMEAN
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Input "AV1: ",A
+Input "D: ",D
+Input "N: ",N
+ClrHome
+While N!=2
+A+D->X
+X->A
+N-1->N
+Disp X
+End
