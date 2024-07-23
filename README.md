@@ -8,7 +8,7 @@ To easily browse and download programs check out the website: [TI Programs](http
 
 ## Using Programs
 
-To use these programs, you will need a TI calculator and a way to transfer the programs to the calculator. You can use a USB cable or a program like [TI Connect CE](https://education.ti.com/en/products/computer-software/ti-connect-ce-sw) to transfer the programs. You can also enter the programs manually on the calculator if you prefer.
+To use these programs, you will need a TI calculator and a way to transfer the programs to the calculator. You can use a USB cable with a program like [TI Connect CE](https://education.ti.com/en/products/computer-software/ti-connect-ce-sw) to transfer the programs. You can also enter the programs manually on the calculator if you prefer.
 
 ## Making Programs
 
