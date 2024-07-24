@@ -42,3 +42,40 @@
   transition: ease-in-out;
   transition-duration: 400ms;
 }
+
+#code-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #44444442;
+}
+
+#code-preview div {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  overflow: auto;
+}
+
+#close-preview {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff00;
+}
+
+#close-preview:hover svg {
+  fill: rgba(68, 159, 68, 0.873);
+  transition: ease-in-out;
+  transition-duration: 400ms;
+}

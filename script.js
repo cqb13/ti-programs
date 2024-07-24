@@ -1,5 +1,8 @@
 const loading = document.getElementById("loading");
 const programs = document.getElementById("programs");
+const codePreview = document.getElementById("code-preview");
+const closePreview = document.getElementById("close-preview");
+const codeContent = document.getElementById("code-content");
 
 const loadPrograms = async () => {
   loading.style.display = "block";
@@ -29,7 +32,7 @@ const loadPrograms = async () => {
               if (file.name.endsWith(".8xp")) {
                 download_url = file.download_url;
               } else if (file.name.endsWith(".txt")) {
-                txt_file_url = file.html_url;
+                txt_file_url = file.url;
               } else if (file.name === "about.md") {
                 const aboutResponse = await fetch(file.download_url);
 
@@ -98,7 +101,7 @@ const createProgramCard = (name, description, download_url, txt_file_url) => {
   const view = document.createElement("button");
   view.textContent = "View Code";
   view.addEventListener("click", () => {
-    window.location.href = txt_file_url;
+    openCodeViewModel(txt_file_url);
   });
 
   div.appendChild(download);
@@ -112,3 +115,30 @@ const createProgramCard = (name, description, download_url, txt_file_url) => {
 };
 
 loadPrograms();
+
+const openCodeViewModel = async (codeUrl) => {
+  document.body.style.overflow = "hidden";
+  codePreview.style.display = "flex";
+
+  const response = await fetch(codeUrl);
+  const data = await response.json();
+  const encodedContent = data.content;
+  // content is base64 encoded
+  const decodedContent = atob(encodedContent);
+  codeContent.textContent = decodedContent;
+};
+
+closePreview.addEventListener("click", () => {
+  closeCodeViewModel();
+});
+
+codePreview.addEventListener("click", (e) => {
+  if (e.target === codePreview) {
+    closeCodeViewModel();
+  }
+});
+
+const closeCodeViewModel = () => {
+  document.body.style.overflow = "auto";
+  codePreview.style.display = "none";
+};
