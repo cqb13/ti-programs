@@ -1,0 +1,60 @@
+SEQ
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Disp "AVN:AV1+(N-1)D"
+Disp "AVN: 1"
+Disp "AV1: 2"
+Disp "N: 3"
+Disp "D: 4"
+Input "CHOICE: ",C
+If C=1
+Goto 1
+If C=2
+Goto 2
+If C=3
+Goto 3
+If C=4
+Goto 4
+Lbl 1
+ClrHome
+Input "AV1: ",A
+Input "N: ",N
+Input "D: ",D
+N-1->X
+X*D->Y
+Y+A->Z
+Disp Z
+Stop
+Lbl 2
+ClrHome
+Input "AVN: ",A
+Input "N: ",N
+Input "D: ",D
+N*D->X
+X-D->Y
+A-Y->Z
+Disp Z
+Stop
+Lbl 3
+ClrHome
+Input "AVN: ",A
+Input "AV1: ",B
+Input "D: ",D
+A-B->X
+X/D->Y
+Y+1->N
+Disp N
+Stop
+Lbl 4
+ClrHome
+Input "AVN: ",A
+Input "AV1: ",B
+Input "N: ",N
+A-B->X
+N-1->Y
+X/Y->D
+Disp D

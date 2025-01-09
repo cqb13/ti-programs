@@ -1,0 +1,13 @@
+QUAD
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Disp "AX^^2+BX+C"
+Prompt A,B,C
+B^^2-4AC->D
+(~B+sqrt(D))/(2A)->X
+(~B-sqrt(D))/(2A)->Y
+Disp X,Y

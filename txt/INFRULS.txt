@@ -1,0 +1,11 @@
+INFRULS
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Disp "COV: ABS R < 1"
+Disp "  HAS SUM"
+Disp "DIV ABS R > 1"
+Disp "  NO SUM"

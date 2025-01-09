@@ -1,0 +1,35 @@
+LAWCOS
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Disp "SSS: 1"
+Disp "SAS: 2"
+Input "CHOICE: ",C
+If C=2
+Goto 1
+If C=1
+Goto 2
+Lbl 1
+ClrHome
+Input "A=",A
+Input "B=",B
+Input "C^^o=",C
+(A^^2+B^^2-(2*A*B)*cos(C))->X
+sqrt(X)->Y
+Disp "C="
+Output(4,3,Y)
+Stop
+Lbl 2
+ClrHome
+Input "A=",A
+Input "B=",B
+Input "C=",C
+(C^^2-B^^2-A^^2)->X
+X/(2*A*B)->Y
+Y*~1->Z
+cos^-1(Z)->V
+Disp "C^^o="
+Output(4,4,V)

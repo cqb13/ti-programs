@@ -1,0 +1,63 @@
+GEOSEQ
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Disp "AVN=AV1*R^N-1"
+Disp "AVN: 1"
+Disp "AV1: 2"
+Disp "R: 3"
+Disp "N: 4"
+Input "CHOICE: ",C
+ClrHome
+If C=1
+Goto 1
+If C=2
+Goto 2
+If C=3
+Goto 3
+If C=4
+Goto 4
+Else
+Stop
+Lbl 1
+Input "AV1: ",B
+Input "R: ",R
+Input "N: ",N
+N-1->X
+R^X->Y
+B*Y->A
+Disp A
+Stop
+Lbl 2
+Input "AVN: ",A
+Input "R: ",R
+Input "N: ",N
+N-1->X
+R^X->Y
+A/Y->B
+Disp B
+Stop
+Lbl 3
+Input "AVN: ",A
+Input "AV1: ",B
+Input "N: ",N
+N-1->X
+A/B->Y
+1/X->Z
+Y^Z->V
+Disp V
+Disp "+/-"
+Stop
+Lbl 4
+Input "AVN: ",A
+Input "AV1: ",B
+Input "R: ",R
+A/B->X
+ln(X)->Y
+ln(R)->Z
+Y/Z->V
+V+1->U
+Disp U

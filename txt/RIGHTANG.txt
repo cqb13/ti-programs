@@ -1,0 +1,84 @@
+RIGHTANG
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Disp "INV: ~"
+Disp "SIN: 1"
+Disp "COS: 2"
+Disp "TAN: 3"
+Input "CHOICE: ",C
+If C=~1
+Goto 1
+If C=~2
+Goto 2
+If C=~3
+Goto 3
+If C=1
+Goto 4
+If C=2
+Goto 5
+If C=3
+Goto 6
+Else
+Disp "NO OPT"
+Stop
+Lbl 1
+Input "HYP: ",H
+Input "OPP: ",O
+H^2-O^2->X
+sqrt(X->A
+Goto 7
+Lbl 2
+Input "HYP: ",H
+Input "ADJ: ",A
+H^2-A^2->X
+sqrt(X->O
+Goto 7
+Lbl 3
+Input "OPP: ",O
+Input "ADJ: ",A
+O^2+A^2->X
+sqrt(X->H
+Goto 7
+Lbl 4
+Input "OPP: ",O
+Input "HYP: ",H
+H^2-O^2->X
+sqrt(X->A
+Goto 7
+Lbl 5
+Input "ADJ: ",A
+Input "HYP: ",H
+H^2-A^2->X
+sqrt(X->O
+Goto 7
+Lbl 6
+Input "OPP: ",O
+Input "ADJ: ",A
+O^2+A^2->X
+sqrt(X->H
+Goto 7
+Lbl 7
+ClrHome
+Disp "SIN:     /    "
+Output(1,6,O)
+Output(1,11,H)
+Disp "COS:     /    "
+Output(2,6,A)
+Output(2,11,H)
+Disp "TAN:     /    "
+Output(3,6,O)
+Output(3,11,A)
+Disp "SIN^~1:      /"
+Output(4,9,H)
+Output(4,15,O)
+Disp "COS^~1:      /"
+Output(5,9,H)
+Output(5,15,A)
+Disp "TAN^~1:      /"
+Output(6,9,A)
+Output(6,15,O)
+

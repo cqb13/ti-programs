@@ -1,0 +1,18 @@
+HISTOG
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Input "TOTAL DATA: ",T
+Input "MAX: ",M
+Input "MIN: ",L
+sqrt(T->W
+round(W+0.5,0)->G
+(M-L)/G->C
+round(C+0.5,0)->C
+Disp "CLASSES: "
+Output(4,10,G
+Disp "CLASS WIDTH: "
+Output(5,14,C

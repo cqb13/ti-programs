@@ -1,0 +1,18 @@
+COMPINT
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Disp "A=P(1+(R/N))^N*T
+Input "YEAR TIME(T): ",T
+Input "DECI RATE(R): ",R
+Input "START(P): ",P
+Input "COMP PER/Y(N): ",N
+R/N->X
+X+1->Y
+N*T->Z
+Y^Z->V
+V*P->D
+Disp D

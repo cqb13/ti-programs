@@ -1,0 +1,70 @@
+COMP
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Disp "A=P[e]^RT"
+Disp "A: ANSWER (1)"
+Disp "P: PRINCIPLE (2)"
+Disp "R: RATE(DECI) (3)"
+Disp "T: TIME (4)"
+Input "SOLVE FOR: ",O
+If O=1
+Goto 1
+If O=2
+Goto 2
+If O=3
+Goto 3
+If O=4
+Goto 4
+Else
+Disp "INVALID OPTION"
+Stop
+Lbl 1
+ClrHome
+Input "P: ",P
+Input "R: ",R
+Input "T: ",T
+R*T->X
+[e]^X->Y
+P*Y->Z
+Disp Z
+Stop
+Lbl 2
+ClrHome
+Input "A: ",A
+Input "R: ",R
+Input "T: ",T
+R*T->X
+[e]^X->Y
+A/Y->Z
+Disp Z
+Stop
+Lbl 3
+ClrHome
+Input "A: ",A
+Input "P: ",P
+Input "T: ",T
+A/P->X
+ln(X->Y
+Y/T->Z
+Z*100->V
+ClrHome
+Output(1,1,"DECI: "
+Output(1,7,Z
+Output(2,1,"PCENT: "
+Output(2,8,V
+Pause 
+ClrHome
+Stop
+Lbl 4
+Input "A: ",A
+Input "P: ",P
+Input "R: ",R
+A/P->X
+ln(X->Y
+Y/R->Z
+Disp Z
+Stop

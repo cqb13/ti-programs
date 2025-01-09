@@ -1,0 +1,47 @@
+TRIGVAL
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Disp "45,45,90:(1)"
+Disp "30,60,90:(2)"
+Input "CHOICE: ",C
+ClrHome
+If C=1
+Goto 1
+If C=2
+Goto 2
+Lbl 1
+Disp "sin(sqrt(2)/2"
+Disp "cos(sqrt(2)/2"
+Disp "tan(1"
+Disp "sin^-1(sqrt(2)"
+Disp "cos^-1(sqrt(2)"
+Disp "tan^-1(1"
+Stop
+Lbl 2
+Disp "30:(1)"
+Disp "60:(2)"
+Input "CHOICE: ",C
+ClrHome
+If C=1
+Goto 3
+If C=2
+Goto 4
+Lbl 3
+Disp "sin(1/2"
+Disp "cos(sqrt(3)/2"
+Disp "tan(sqrt(3)/3"
+Disp "sin^-1(2"
+Disp "cos^-1(2sqrt(3)/3"
+Disp "tan^-1(sqrt(3)"
+Stop
+Lbl 4
+Disp "sin(sqrt(3)/2"
+Disp "cos(1/2"
+Disp "tan(sqrt(3)"
+Disp "sin^-1(2sqrt(3)/3"
+Disp "cos^-1(2"
+Disp "tan^-1(sqrt(3)/3"

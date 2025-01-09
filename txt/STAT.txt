@@ -1,0 +1,74 @@
+STAT
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Disp "Z SCORE: 1"
+Disp "PERCENTILE: 2"
+Disp "P TO DATA: 3"
+Disp "PLOTS: 4"
+Disp "EMPIRICAL: 5
+Input "CHOICE: ",C
+ClrHome
+If C=1
+Goto 1
+If C=2
+Goto 2
+If C=3
+Goto 3
+If C=4
+Goto 4
+If C=5
+Goto 5
+Lbl 1
+Input "VALUE: ",V
+Input "MEAN: ",M
+Input "DEVIATION: ",D
+V-M->X
+X/D->Z
+Disp "Z SCORE: "
+Output(4,10,Z)
+Return
+Lbl 2
+Input "NUM VAL < X: ",N
+Input "NUM TOTAL VALS: ",T
+N/T->D
+D*100->P
+Disp "PERCENT: "
+Output(3,10,P)
+Return
+Lbl 3
+Input "PERCENTILE: ",P
+Input "NUM TOTAL VALS: ",T
+P/100->D
+D*T->L
+Disp "LOCATION: "
+Output(3,11,L)
+Disp "IF WHOLE ADD VAL AT L TO VAL AFTER, THEN DIV BY 2"
+Disp "---------"
+Disp "ELSE ROUND UP"
+Return
+Lbl 4
+Input "Q1: ",A
+Input "Q3: ",B
+B-A->Q
+B+A->T
+T/2->M
+Q*1.5->X
+A-X->L
+B+X->U
+Disp "IQR: "
+Output(3,5,Q)
+Disp "MID Q: "
+Output(4,8,M)
+Disp "1.5Q: "
+Output(5,8,X)
+Disp "LF: "
+Output(6,5,L)
+Disp "UF: "
+Output(7,5,U)
+Return
+Lbl 5
+Disp "0.1,2.4,13.5,34"

@@ -1,0 +1,46 @@
+RADICAL
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+Lbl A
+ClrHome
+0->M
+Input "TOP: ",L
+Output(1,21,")"
+Input ("ENTER NUMBER sqrt(",X
+If X<0
+Then
+1->M
+~X->X
+End
+"----------------------
+X->B:1->A:2->I
+While I^L<=B
+While not(fPart(B/I^L)
+B/I^L->B:A*I->A
+End
+I+1+(I>2)->I
+End
+"----------------------
+Disp "--------------------------"
+Disp "SIMPLIFIES TO"
+Disp " "
+Disp " "
+Disp "[ENTER] FOR ANOTHER"
+Disp "[CLEAR] TO END
+0->S:0->T
+If A>=10:1->S
+If B>=10:1->T
+If A>=100:2->S
+If B>=100:2->T
+
+If (A!=1):Output(4,1,A)
+If (M=1):Output(4,2+S,"[i]")
+If (B!=1)
+Then
+Output(4,2+M+S,"sqrt(")
+Output(4,4+M+S,B)
+Output(4,5+S+M+T,")")
+End
