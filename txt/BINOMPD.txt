@@ -1,0 +1,44 @@
+BINOMPD
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+Lbl 5
+ClrHome
+Menu("Choice","Exactly",1,"At Least",2,"At Most",3,"Between",4)
+ClrHome
+Lbl 1
+Input "N: ",N
+Input "p: ",P
+Input "x: ",X
+binompdf(N,P,X)->A
+Disp A
+Pause
+Goto 5
+Lbl 2
+Input "N: ",N
+Input "p: ",P
+Input "x: ",X
+(1-binomcdf(N,P,X-1))->A
+Disp A
+Pause
+Goto 5
+Lbl 3
+Input "N: ",N
+Input "p: ",P
+Input "x: ",X
+binomcdf(N,P,X)->A
+Disp A
+Pause
+Goto 5
+Lbl 4
+Input "N: ",N
+Input "p: ",P
+Input "Min: ",M
+Input "Max: ",O
+(binomcdf(N,P,O)-binomcdf(N,P,M-1))->A
+Disp A
+Pause
+Goto 5
+
