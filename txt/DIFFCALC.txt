@@ -1,0 +1,221 @@
+DIFFCALC
+Created by TI Connect CE 6.0.1.344
+Program
+RAM
+accessible
+TI-84+
+ClrHome
+Menu("Choices","Radical",1,"DEG/RAD CONV",2,"Arc Len",5,"Sector Area",6,"Trig Func",7,"Ambig Case",8)
+Lbl 1
+0->M
+0->M
+Input "TOP: ",L
+Output(2,21,")"
+Input ("ENTER NUMBER sqrt(",X
+ClrHome
+If X<0
+Then
+1->M
+~X->X
+End
+"----------------------
+X->B:1->A:2->I
+While I^L<=B
+While not(fPart(B/I^L)
+B/I^L->B:A*I->A
+End
+I+1+(I>2)->I
+End
+"----------------------
+Disp "--------------------------"
+Disp "SIMPLIFIES TO"
+Disp " "
+Disp " "
+Disp "[ENTER] FOR ANOTHER"
+Disp "[CLEAR] TO END
+0->S:0->T
+If A>=10:1->S
+If B>=10:1->T
+If A>=100:2->S
+If B>=100:2->T
+
+If A!=1
+Then
+Output(4,1,A)
+End
+If M=1
+Then
+Output(4,2+S,"[i]")
+End
+If B!=1
+Then
+Output(4,2+M+S,"sqrt(")
+Output(4,7+M+S,B)  
+Output(4,8+M+S+T,")")
+End
+Stop
+Lbl 2
+Menu("Choices","DEG > RAD",3,"RAD > DEG",4)
+Lbl 3
+Input "Degree: ",D
+D/180->A
+Disp A>Frac
+Stop
+Lbl 4
+Input "Radian: ",R
+R*180->A
+Disp A
+Stop
+Lbl 5
+Input "r: ",R
+Input "Theta: ",T
+R*T->A
+Disp A>Frac
+Stop
+Lbl 6
+Input "r: ",R
+Input "Theta: ",T
+R^2->X
+X/2->Y
+Y*T->A
+Disp A>Frac
+Stop
+Lbl 7
+Disp "TRIG EXACT VALUES"
+Disp "1: DEGREE MODE"
+Disp "2: RADIAN MODE"
+Input "MODE? ",M
+If M!=1 and M!=2
+Then
+Disp "INVALID MODE"
+Stop
+End
+
+ClrHome
+Input "ANGLE? ",A
+If M=2
+Then
+M*180->M
+End
+
+Disp "FUNCS:"
+Disp "1=SIN, 2=COS, 3=TAN"
+Disp "4=CSC, 5=SEC, 6=COT"
+Input "FUNC: ",F
+ClrHome
+While A<0
+A+360->A
+End
+While A>=360
+A-360->A
+End
+A*pi/180->R
+
+ClrHome
+If F=1
+Then
+Disp "SIN(",A,")=",sin(R)
+End
+If F=2
+Then
+Disp "COS(",A,")=",cos(R)
+End
+If F=3
+Then
+If cos(R)=0
+Then
+Disp "UNDEFINED"
+Else
+Disp "TAN(",A,")=",tan(R)
+End
+End
+If F=4
+Then
+If sin(R)=0
+Then
+Disp "UNDEFINED"
+Else
+Disp "CSC(",A,")=",1/sin(R)
+End
+End
+If F=5
+Then
+If cos(R)=0
+Then
+Disp "UNDEFINED"
+Else
+Disp "SEC(",A,")=",1/cos(R)
+End
+End
+If F=6
+Then
+If sin(R)=0
+Then
+Disp "UNDEFINED"
+Else
+Disp "COT(",A,")=",1/tan(R)
+End
+End
+Stop
+Lbl 8
+Input "a: ",A
+Input "b: ",B
+Input "A^^o: ",G
+ClrHome
+If G<90
+Goto A
+If G>=90
+Goto B
+Lbl A
+sin(G)*B->H
+If A<B and A<H
+Goto D
+If A<B and A=H
+Goto C
+If A<B and A>H
+Goto E
+If A>=B
+Goto C
+Lbl B
+If A<=B
+Goto D
+If A>B
+Goto C
+Lbl C
+Disp "1 Solution"
+sin^-1((B*sin(G))/A)->X
+180-(G+X)->Y
+(A*sin(Y))/sin(G)->Z
+Disp "B^^o="
+Output(2,4,X)
+Disp "C^^o="
+Output(3,4,Y)
+Disp "c="
+Output(4,3,Z)
+Stop
+Lbl D
+Disp "No Solution"
+Stop
+Lbl E
+Disp "2 Solutions"
+Disp "1st Triangle"
+sin^-1((B*sin(G))/A)->X
+180-(G+X)->Y
+(A*sin(Y))/sin(G)->Z
+Disp "B^^o="
+Output(3,4,X)
+Disp "C^^o="
+Output(4,4,Y)
+Disp "c="
+Output(5,3,Z)
+Disp "2nd Triangle"
+180-X->V
+180-(G+V)->U
+(B*sin(U))/sin(V)->T
+Disp "B^^o="
+Output(7,4,V)
+Disp "C^^o="
+Output(8,4,U)
+Disp "c="
+Output(9,3,T)
+Stop
